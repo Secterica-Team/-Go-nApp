@@ -9,8 +9,13 @@ export default function Page1() {
     const navigation = useNavigation();
 
     return (
+<<<<<<< HEAD
         <View style={styles.container}>
             <Image style={styles.image} source={require('../photos/2.jpg')} />
+=======
+        <View>
+            <Image style={styles.image2} source={require('../photos/2.jpg')} />
+>>>>>>> 09290b668edd3be2492e5ea10b16798c6e9f7fd4
 
             <View style={styles.container}>
                 <Text style={styles.text}> Automatic Timing System </Text>
@@ -37,9 +42,12 @@ export default function Page1() {
 
 const styles = StyleSheet.create({
 
+<<<<<<< HEAD
     container:{
     alignItems: "center",
     },
+=======
+>>>>>>> 09290b668edd3be2492e5ea10b16798c6e9f7fd4
 
     text: {
         fontSize: 20,
@@ -57,8 +65,21 @@ const styles = StyleSheet.create({
 
 
     },
+<<<<<<< HEAD
 
     image: {
+=======
+    image: {
+        height: 80,
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#3333',
+        paddingBottom: 10
+
+    },
+    image2: {
+>>>>>>> 09290b668edd3be2492e5ea10b16798c6e9f7fd4
 
         width: 500,
         marginBottom: 393,
@@ -69,7 +90,11 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flexDirection: 'row',
+<<<<<<< HEAD
         // justifyContent: 'center',
+=======
+        justifyContent: 'center',
+>>>>>>> 09290b668edd3be2492e5ea10b16798c6e9f7fd4
         alignItems: 'center',
         // backgroundColor: 'red'
     },
