@@ -1,26 +1,17 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 
-<<<<<<< HEAD
-import {View, Image, StyleSheet, Text} from 'react-native';
-import Button from "react-native-button";
-import {useNavigation} from "@react-navigation/native";
-
-const imageSrc = require('../photos/location_color_1.jpg');
-export default function Page2() {
-    const navigation = useNavigation();
-    return (
-        <View style={styles.container}>
-            <Image style={styles.image} source={imageSrc}/>
-=======
 import { View, Image, StyleSheet, Text } from 'react-native';
 import Button from "react-native-button";
 const imageSrc = require('../photos/location_color_1.jpg');
-export default function Page2() {
-    
+
+export default function OnboardingScreen2() {
+
+    const navigation = useNavigation();
+
     return (
         <View>
             <Image style={styles.image2} source={imageSrc} />
->>>>>>> 09290b668edd3be2492e5ea10b16798c6e9f7fd4
 
             <View>
                 <Text style={styles.text}> Accuracy And Speed </Text>
@@ -33,13 +24,7 @@ export default function Page2() {
 
             <View style={styles.buttonContainer}>
                 <Button style={styles.button} variant="outlined">Skip </Button>
-<<<<<<< HEAD
-                <Button style={styles.button2} variant="outlined"
-                        onPress={() => navigation.navigate("Page3")
-                        }>Next {'>'}</Button>
-=======
-                <Button style={styles.button2} variant="outlined">Next -{'>'}</Button>
->>>>>>> 09290b668edd3be2492e5ea10b16798c6e9f7fd4
+                <Button style={styles.button2} variant="outlined" onPress={() => {navigation.navigate("OnboardingScreen3")}}>Next -{'>'}</Button>
 
             </View>
 
@@ -49,35 +34,6 @@ export default function Page2() {
 
 const styles = StyleSheet.create({
 
-<<<<<<< HEAD
-    container: {
-        alignItems: "center",
-    },
-
-    text: {
-        fontSize: 20,
-        width: 500,
-        textAlign: "center",
-        marginVertical: -335,
-
-
-    },
-    text2: {
-        fontSize: 20,
-        width: 500,
-        textAlign: "center",
-        marginVertical: -275,
-
-
-    },
-
-    image: {
-
-        width: 500,
-        marginBottom: 393,
-
-        backgroundColor: '#3333',
-=======
 
     text: {
         fontSize: 20,
@@ -103,19 +59,13 @@ const styles = StyleSheet.create({
         height: 400,
 
         // backgroundColor: '#3333',
->>>>>>> 09290b668edd3be2492e5ea10b16798c6e9f7fd4
 
 
     },
     buttonContainer: {
         flexDirection: 'row',
-<<<<<<< HEAD
-        alignItems: 'center',
-
-=======
         justifyContent: 'center',
         alignItems: 'center',
->>>>>>> 09290b668edd3be2492e5ea10b16798c6e9f7fd4
     },
     button: {
         marginRight: 100,
@@ -123,10 +73,7 @@ const styles = StyleSheet.create({
         color: '#555555',
         fontSize: 18,
 
-<<<<<<< HEAD
-=======
         // backgroundColor: 'steelblue'
->>>>>>> 09290b668edd3be2492e5ea10b16798c6e9f7fd4
     },
     button2: {
         marginRight: 100,
