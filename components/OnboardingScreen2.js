@@ -1,9 +1,12 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 
-import { View, Image, StyleSheet, Text } from 'react-native';
+import { View, Image, StyleSheet, Text, Dimensions } from 'react-native';
 import Button from "react-native-button";
-const imageSrc = require('../photos/location_color_1.jpg');
+const imageSrc = require('../photos/onboard_2.jpg');
+
+const imageWidth = Dimensions.get("screen").width;
+const imageHeight = imageWidth;
 
 export default function OnboardingScreen2() {
 
@@ -11,74 +14,73 @@ export default function OnboardingScreen2() {
 
     return (
         <View>
-            <Image style={styles.image2} source={imageSrc} />
+            <Image style={styles.image} source={imageSrc} />
 
-            <View>
-                <Text style={styles.text}> Accuracy And Speed </Text>
+            <View style={styles.container}>
+                <Text style={styles.title}> Accuracy And Speed </Text>
+
+                <View style={styles.textWrapper}>
+                    <Text style={styles.text}>
+                        Get test results with a mobile app that is consistently up-to-date
+                </Text>
+                </View>
+
+                <View style={styles.buttonContainer}>
+                    <Button
+                        style={styles.button}
+                        variant="outlined"
+                        onPress={() => { navigation.navigate("Login") }}
+                    >
+                        Skip
+                </Button>
+                    <Button
+                        style={styles.button}
+                        variant="outlined"
+                        onPress={() => { navigation.navigate("OnboardingScreen3") }}
+                    >
+                        Next {'>'}
+                    </Button>
+                </View>
             </View>
-            <View>
-                <Text style={styles.text2}> Get test results with a mobile {'\n'}
-                    app that is consistently {'\n'}
-                    up-to-date </Text>
-            </View>
-
-            <View style={styles.buttonContainer}>
-                <Button style={styles.button} variant="outlined">Skip </Button>
-                <Button style={styles.button2} variant="outlined" onPress={() => {navigation.navigate("OnboardingScreen3")}}>Next -{'>'}</Button>
-
-            </View>
-
         </View>
     )
 }
 
 const styles = StyleSheet.create({
 
-
+    container: {
+        height: Dimensions.get('screen').height - imageHeight,
+    },
+    title: {
+        marginTop: '10%',
+        flex: 1,
+        fontSize: 25,
+        width: "100%",
+        justifyContent: 'center',
+        textAlign: "center",
+    },
     text: {
         fontSize: 20,
-        width: "100%",
         textAlign: "center",
+        width: "70%",
     },
-    text2: {
-        fontSize: 20,
-        textAlign: "center",
+    textWrapper: {
+        flex: 3,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     image: {
-        height: 80,
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#3333',
-        paddingBottom: 10
-
-    },
-    image2: {
-
-        width: 300,
-        height: 400,
-
-        // backgroundColor: '#3333',
-
-
+        height: imageHeight,
+        width: imageWidth,
     },
     buttonContainer: {
+        flex: 2,
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center',
     },
     button: {
-        marginRight: 100,
-        paddingLeft: 100,
         color: '#555555',
         fontSize: 18,
-
-        // backgroundColor: 'steelblue'
-    },
-    button2: {
-        marginRight: 100,
-        paddingLeft: 100,
-        color: '#555555',
-        fontWeight: "bold",
     },
 })

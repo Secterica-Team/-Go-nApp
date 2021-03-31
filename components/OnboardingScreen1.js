@@ -13,7 +13,7 @@ export default function OnboardingScreen1() {
 
     return (
         <View>
-            <Image style={styles.image} source={require('../photos/2.jpg')} />
+            <Image style={styles.image} source={require('../photos/onboard_1.jpg')} />
 
             <View style={styles.container}>
                 <Text style={styles.title}> Automatic Timing System </Text>
@@ -27,7 +27,7 @@ export default function OnboardingScreen1() {
                     <Button 
                         style={styles.button} 
                         variant="outlined"
-                        onPress={() => {navigation.navigate("BottomTab")}}
+                        onPress={() => {navigation.navigate("Login")}}
                     >
                         Skip
                     </Button>
