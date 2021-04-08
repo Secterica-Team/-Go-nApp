@@ -29,7 +29,7 @@ export default function OnboardingScreen2() {
                     <Button
                         style={styles.button}
                         variant="outlined"
-                        onPress={() => { navigation.navigate("Login") }}
+                        onPress={() => { navigation.navigate("SignUp") }}
                     >
                         Skip
                 </Button>
