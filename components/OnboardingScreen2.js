@@ -30,9 +30,13 @@ export default function OnboardingScreen2() {
                     <Button
                         style={styles.button}
                         variant="outlined"
+<<<<<<< HEAD
                         onPress={() => {
                             navigation.navigate("SignUp")
                         }}
+=======
+                        onPress={() => { navigation.navigate("SignUp") }}
+>>>>>>> 71cc267b4ae2696aaa441a49b79f0b503fb16f23
                     >
                         <Text  style={{color: "#555555", fontSize: 18}}> Пропустити </Text>
                     </Button>
