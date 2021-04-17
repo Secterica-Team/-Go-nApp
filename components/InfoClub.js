@@ -11,14 +11,13 @@ export default function Page3() {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={require('../photos/onboard_3.jpg')}/>
+            <Image style={styles.image} source={require('../photos/seo 1.jpg')}/>
 
             <View style={styles.container}>
-                <Text style={styles.title}> Персональна Статистика </Text>
+                <Text style={styles.title}> Перш за все, </Text>
             </View>
             <View style={styles.container}>
-                <Text style={styles.text}> Після тренування система моніторингу дозволяє переглянути
-                    об'єктивні дані тренувань кожного гравця </Text>
+                <Text style={styles.text}> Оберіть власний спортивний клуб із переліку, щоб приєднатися  </Text>
             </View>
 
             <View style={styles.buttonContainer}>
@@ -29,7 +28,7 @@ export default function Page3() {
                     style={styles.button}
 
                     onPress={() => {
-                        navigation.navigate('SignUp')
+
                     }
 
                     }

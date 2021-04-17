@@ -1,45 +1,48 @@
-import { useNavigation } from '@react-navigation/native';
-import React, { useState } from 'react'
-import { View, Image, StyleSheet, Text, Dimensions } from 'react-native';
-import Button from "react-native-button";
+import {useNavigation} from '@react-navigation/native';
+import React, {useState} from 'react'
+import {View, Image, StyleSheet, Text, Dimensions, TouchableHighlight} from 'react-native';
+import {Button} from "react-native-paper";
+
 
 const imageWidth = Dimensions.get("screen").width;
 const imageHeight = imageWidth;
+
+
+
 
 export default function OnboardingScreen1() {
     const navigation = useNavigation();
 
 
-
     return (
         <View>
-            <Image style={styles.image} source={require('../photos/onboard_1.jpg')} />
+            <Image style={styles.image} source={require('../photos/onboard_1.jpg')}/>
 
             <View style={styles.container}>
-                <Text style={styles.title}> Automatic Timing System </Text>
+                <Text style={styles.title}> Автоматична Система Часу </Text>
                 <View style={styles.textWrapper}>
-                    <Text style={styles.text}> Test sports skills every day with timing gates
-                    simply using your smart phone
-                as a controller </Text>
+                    <Text style={styles.text}> Тестуйте спортивні навички за допомогою воріт і
+                        зручно організовуйте власні тренування </Text>
                 </View>
 
                 <View style={styles.buttonContainer}>
-                    <Button 
-                        style={styles.button} 
-                        variant="outlined"
-                        onPress={() => {navigation.navigate("Login")}}
-                    >
-                        Skip
-                    </Button>
                     <Button
-                        style={styles.button} 
+                        style={styles.button}
+                        variant="outlined"
+                        onPress={() => {
+                            navigation.navigate("SignUp")
+                        }}
+                    >
+                      <Text  style={{color: "#555555", fontSize: 18}}> Пропустити </Text>
+                    </Button>
+                    <TouchableHighlight
+                        style={styles.button}
                         variant="outlined"
                         onPress={
                             () => navigation.navigate("OnboardingScreen2")
                         }>
-                        Next {'>'}
-                    </Button>
-
+                        <Text style={{color: "#555555", fontSize: 18}}>Далі {'→'} </Text>
+                    </TouchableHighlight>
 
 
                 </View>
@@ -49,9 +52,9 @@ export default function OnboardingScreen1() {
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         // flex:1,
-        height: Dimensions.get('screen').height-imageHeight,
+        height: Dimensions.get('screen').height - imageHeight,
     },
     title: {
         marginTop: '10%',
@@ -61,7 +64,7 @@ const styles = StyleSheet.create({
     },
     text: {
         marginTop: '5%',
-        fontSize: 20,
+        fontSize: 18,
         width: '70%',
         textAlign: "center",
     },
@@ -85,6 +88,7 @@ const styles = StyleSheet.create({
     button: {
         color: '#555555',
         fontSize: 18,
+
     },
 })
 

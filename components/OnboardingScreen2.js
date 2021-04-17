@@ -1,8 +1,9 @@
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react'
 
-import { View, Image, StyleSheet, Text, Dimensions } from 'react-native';
-import Button from "react-native-button";
+import {View, Image, StyleSheet, Text, Dimensions} from 'react-native';
+import {Button} from "react-native-paper";
+
 const imageSrc = require('../photos/onboard_2.jpg');
 
 const imageWidth = Dimensions.get("screen").width;
@@ -14,31 +15,36 @@ export default function OnboardingScreen2() {
 
     return (
         <View>
-            <Image style={styles.image} source={imageSrc} />
+            <Image style={styles.image} source={imageSrc}/>
 
             <View style={styles.container}>
-                <Text style={styles.title}> Accuracy And Speed </Text>
+                <Text style={styles.title}> Точність і Швидкість </Text>
 
                 <View style={styles.textWrapper}>
                     <Text style={styles.text}>
-                        Get test results with a mobile app that is consistently up-to-date
-                </Text>
+                        Отримуйте результати тестування з мобільним додатком для відстежувати прогресу
+                    </Text>
                 </View>
 
                 <View style={styles.buttonContainer}>
                     <Button
                         style={styles.button}
                         variant="outlined"
-                        onPress={() => { navigation.navigate("Login") }}
+                        onPress={() => {
+                            navigation.navigate("SignUp")
+                        }}
                     >
-                        Skip
-                </Button>
+                        <Text  style={{color: "#555555", fontSize: 18}}> Пропустити </Text>
+                    </Button>
                     <Button
+
                         style={styles.button}
                         variant="outlined"
-                        onPress={() => { navigation.navigate("OnboardingScreen3") }}
+                        onPress={() => {
+                            navigation.navigate("OnboardingScreen3")
+                        }}
                     >
-                        Next {'>'}
+                        <Text  style={{color: "#555555", fontSize: 18}} > Далі {'→'} </Text>
                     </Button>
                 </View>
             </View>
@@ -60,7 +66,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
     text: {
-        fontSize: 20,
+        fontSize: 18,
         textAlign: "center",
         width: "70%",
     },
