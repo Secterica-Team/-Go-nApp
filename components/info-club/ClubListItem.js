@@ -1,42 +1,72 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { Avatar, Card, IconButton, Surface } from 'react-native-paper'
+import { Avatar, Button, Card, IconButton, Surface, useTheme } from 'react-native-paper'
 import { set } from 'react-native-reanimated'
 import Collapsible from 'react-native-collapsible';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export default function ClubListItem({ item, setOpen, open }) {
+
+    const colors = useTheme().colors;
+
     return (
 
-        <Card style={styles.container}>
-            <Surface style={{
-                elevation: 4,
-                borderRadius: 10,
-            }}>
+        <Surface style={{
+            elevation: 2,
+            marginVertical: 10,
+            marginHorizontal: 2,
+            borderRadius: 20,
+        }}>
+            <Card style={styles.container}>
                 <Card.Title
                     title={item.title}
                     subtitle={item.address}
                     left={(props) => <Avatar.Icon {...props} icon="folder" />}
-                    right={(props) => <IconButton {...props} icon="chevron-down" onPress={() => { setOpen(open? item.id:undefined) }} />}
+                    right={(props) => (
+                        <IconButton
+                            {...props}
+                            icon="chevron-down"
+                            onPress={() => {
+                                setOpen(open !== item.id ? item.id : undefined)
+                                // console.log('clicked on ' + item.title) 
+                            }}
+                        />)}
                 />
-                <Collapsible collapsed={open===item.id}>
+                <Collapsible collapsed={open !== item.id}>
+                    <View style={{ margin: 10, }}>
+                        <Text style={{ marginBottom: 10, }}><Text style={styles.bald}>Вебсайт:</Text> clubleva.ua</Text>
+                        <Text><Text style={styles.bald}>Телефон:</Text> 067 326 1383</Text>
+                        <Button
+                            style={{
+                                // padding: 5,
+                                margin: 5,
+                                borderRadius: 20,
+                                borderColor: colors.primary,
+                                borderWidth: 1,
+                                alignSelf: 'flex-end',
+                            }}
+                            mode={'outlined'}
+                        >
+                            Приєднатися
+                    </Button>
+
+                    </View>
                 </Collapsible>
 
                 {/* <Text>{item}</Text> */}
-            </Surface>
 
-        </Card >
+            </Card >
+        </Surface>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        // elevation: 5,
-        // alignItems: 'center',
-        // padding: 10,
-        marginVertical: 10,
-
-        borderWidth: 1,
-        borderRadius: 10,
-        borderColor: '#E8E8E8'
+        // borderWidth: 1,
+        borderRadius: 20,
+        // borderColor: '#E8E8E8'
+    },
+    bald: {
+        fontWeight: 'bold'
     },
 })

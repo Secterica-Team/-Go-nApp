@@ -1,7 +1,8 @@
-import React from 'react'
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import { FlatList, StyleSheet, Text, View, } from 'react-native'
 import { IconButton, TextInput } from 'react-native-paper'
 import ClubListItem from './ClubListItem'
+import InsetShadow from 'react-native-inset-shadow'
 
 const data = [
     {
@@ -29,25 +30,49 @@ const data = [
 
 export default function InfoClub() {
 
+    const [open, setOpen] = useState(undefined)
+    const [searchText, setSearchText] = useState('')
+
     const renderItem = ({ item }) => {
-        return (<ClubListItem id={toString(item.title)} item={item} />)
+        return (<ClubListItem id={toString(item.title)} item={item} open={open} setOpen={setOpen} />)
     }
 
     return (
         <View style={styles.container}>
             <View style={styles.search_wrapper}>
-                <TextInput
-                    placeholder="Пошук"
-                    right={() => <IconButton
-                        icon="camera"
-                        color={"#000"}
-                        size={50}
-                        onPress={() => console.log('Pressed')}
-                    />}
-                />
+                <View
+                    style={
+                        { 
+                            // borderWidth: 1, borderRadius: 30, borderColor: "#24d", 
+                            // height: 60, 
+                            flex: 1,
+                        }
+                    }
+                >
+                    <InsetShadow shadowRadius={100} shadowOffset={4}>
+                        {/* <TextInput
+                            placeholder="Пошук"
+                            value={searchText}
+                            onChangeText={setSearchText}
+                            style={{padding: 10,}}
+                        // right={() => <IconButton
+                        //     icon="camera"
+                        //     color={"#000"}
+                        //     size={50}
+                        //     onPress={() => console.log('Pressed')}
+                        // />}
+                        /> */}
+                        <TextInput
+                            // label="Email"
+                            mode={'outlined'}
+                            value={searchText}
+                            onChangeText={text => setSearchText(text)}
+                        />
+                    </InsetShadow>
+                </View>
             </View>
 
-            <Text>Клуби поблизу:</Text>
+            <Text style={styles.title}>Клуби поблизу:</Text>
             <FlatList
                 style={{ flex: 1, }}
                 data={data}
@@ -68,6 +93,12 @@ const styles = StyleSheet.create({
 
     },
     search_wrapper: {
-        // margin: 20,
+        height: 70,
     },
+    title: {
+        fontSize: 24,
+        // fontFamily: 'Rubik',
+        margin: 10,
+        fontWeight: "100",
+    }
 })
