@@ -10,7 +10,8 @@ import OnboardingScreen1 from './components/OnboardingScreen1';
 import SignUpScreen from './components/SignUpScreen';
 import { Provider as PaperProvider } from 'react-native-paper'
 import LoginScreen from './components/LoginScreen';
-import InfoClub from "./components/InfoClub";
+import InfoClubOnboarding from "./components/info-club/InfoClubOnboarding";
+import InfoClub from './components/info-club/InfoClub';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
   const loggedIn = false;
 
   const initialRouteName = firstTime ? "OnboardingScreen1" : loggedIn ? "BottomTab" : "Login"
+  //const initialRouteName = "InfoClub"
   return (
       <PaperProvider>
         <NavigationContainer>
@@ -37,6 +39,7 @@ export default function App() {
             <Stack.Screen name="OnboardingScreen3" component={OnboardingScreen3} />
             <Stack.Screen name="SignUp" component={SignUpScreen} />
             <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="InfoClubOnboarding" component={InfoClubOnboarding} />
             <Stack.Screen name="InfoClub" component={InfoClub} />
           </Stack.Navigator>
         </NavigationContainer>

@@ -1,7 +1,7 @@
-import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react'
-import {Dimensions, StyleSheet, View, Image} from 'react-native'
-import {Text, TextInput, Button, Checkbox, IconButton, useTheme} from 'react-native-paper'
+import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react'
+import { Dimensions, StyleSheet, View, Image } from 'react-native'
+import { Text, TextInput, Button, Checkbox, IconButton, useTheme } from 'react-native-paper'
 
 const imageWidth = Dimensions.get("screen").width * 0.8;
 const imageHeight = imageWidth;
@@ -41,7 +41,7 @@ export default function LoginScreen() {
                     secureTextEntry={true}
                 />
                 <View style={styles.view_after_input}>
-                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <Checkbox
                             color={"#0245A3"}
                             status={rememberChecked ? 'checked' : 'unchecked'}
@@ -51,8 +51,7 @@ export default function LoginScreen() {
                         />
                         <Text>Запам'ятати мене</Text>
                         <Button uppercase={false} onPress={() => {
-                        }}
-                        > <Text style={styles.forgot_password}>Забули пароль? </Text></Button>
+                        }}> <Text style={styles.forgot_password}>Забули пароль?</Text> </Button>
                     </View>
                     <View style={styles.middle_wrapper}>
                         <Text style={styles.text_sign_up}>Увійти</Text>
@@ -61,9 +60,7 @@ export default function LoginScreen() {
                             icon={'chevron-right'}
                             size={50}
                             color={"#0245A3"}
-                            onPress={() => {
-                                navigation.navigate('InfoCLub')
-                            }}
+                            onPress={() => { navigation.navigate("InfoClubOnboarding") }}
                         />
                     </View>
                 </View>
@@ -71,12 +68,10 @@ export default function LoginScreen() {
                     <Text style={styles.text_have_account}>Ще не маєте аккаунт?</Text>
                     <Button
                         uppercase={false}
-                        // labelStyle={styles.button_sign_up}
-                        onPress={() => {
-                            navigation.navigate('SignUp')
-                        }}
+                        labelStyle={styles.button_sign_up}
+                        onPress={() => { navigation.navigate('SignUp') }}
                     >
-                        <Text style={styles.sign_up}>Зареєструватися </Text>
+                        <Text style={styles.sign_up}>Зареєструватися</Text>
                     </Button>
                 </View>
             </View>
@@ -141,5 +136,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         flex: 1,
     },
-    button_sign_up: {},
+    button_sign_up: {
+    },
 })

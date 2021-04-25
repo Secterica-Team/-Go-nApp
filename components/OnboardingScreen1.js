@@ -35,14 +35,14 @@ export default function OnboardingScreen1() {
                     >
                       <Text  style={{color: "#555555", fontSize: 18}}> Пропустити </Text>
                     </Button>
-                    <TouchableHighlight
+                    <Button
                         style={styles.button}
                         variant="outlined"
                         onPress={
                             () => navigation.navigate("OnboardingScreen2")
                         }>
                         <Text style={{color: "#555555", fontSize: 18}}>Далі {'→'} </Text>
-                    </TouchableHighlight>
+                    </Button>
 
 
                 </View>
@@ -84,11 +84,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-    },
-    button: {
-        color: '#555555',
-        fontSize: 18,
-
     },
 })
 

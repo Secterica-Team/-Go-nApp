@@ -1,9 +1,9 @@
 {
-  "name": "GonAppV9",
-  "displayName": "GonAppV9",
+  "name": "GonAppV12",
+  "displayName": "GonAppV12",
   "expo": {
-    "name": "GonAppV9",
-    "slug": "GonAppV9",
+    "name": "GonAppV12",
+    "slug": "GonAppV12",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"

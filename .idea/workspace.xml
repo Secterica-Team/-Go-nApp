@@ -10,14 +10,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6deb8c7f-b554-4549-bbd7-7ea9e34c95ce" name="Default Changelist" comment="">
+    <list default="true" id="810125a7-7036-4e34-899a-c3d5c0e296b4" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/components/BottomTab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/InfoClub.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/LoginScreen.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/OnboardingScreen1.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/OnboardingScreen2.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/OnboardingScreen3.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/SignUpScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/ClubListItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/InfoClub.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/InfoClubOnboarding.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/right-arrow.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/Ellipse 1.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/Ellipse 1.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/Rectangle 6.jpg" afterDir="false" />
@@ -28,17 +32,19 @@
       <change afterPath="$PROJECT_DIR$/photos/Vector.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/create an account.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/create an account.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/photos/head.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/icons8-стрелка-вправо-в-круге-48.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/idea.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/login.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/onboard_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photos/onboard_1.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/onboard_2.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/onboard_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/photos/right-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/photos/seo 1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/photos/seo 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photos/seo_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photos/seo_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/gonappv12/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/com/gonappv12/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -50,7 +56,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1rIOPja313J3UXnlGNMEmWMdOcF" />
+  <component name="ProjectId" id="1rWoyqiC1StVph9wkiQv0iCQNov" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -63,20 +69,23 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\projects\Secterica\Gon\App\GonAppV12\components\info-club" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\projects\Secterica\Gon\App\GonAppV9" />
+      <recent name="C:\Users\User\projects\Secterica\Gon\App\GonAppV12" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6deb8c7f-b554-4549-bbd7-7ea9e34c95ce" name="Default Changelist" comment="" />
-      <created>1618660114379</created>
+      <changelist id="810125a7-7036-4e34-899a-c3d5c0e296b4" name="Default Changelist" comment="" />
+      <created>1619101463585</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1618660114379</updated>
-      <workItem from="1618660115720" duration="655000" />
-      <workItem from="1618660928556" duration="1125000" />
+      <updated>1619101463585</updated>
+      <workItem from="1619101464716" duration="3429000" />
+      <workItem from="1619359695043" duration="16676000" />
     </task>
     <servers />
   </component>
@@ -96,21 +105,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1618660772796">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1266" height="342" key="GridCell.Tab.0.bottom" timestamp="1619105527249">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1618660772796" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1618660772796">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1266" height="342" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1619105527249" />
+    <state width="1266" height="342" key="GridCell.Tab.0.center" timestamp="1619105527249">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1618660772796" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1618660772796">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1266" height="342" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1619105527249" />
+    <state width="1266" height="342" key="GridCell.Tab.0.left" timestamp="1619105527248">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1618660772796" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1618660772796">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1266" height="342" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1619105527248" />
+    <state width="1266" height="342" key="GridCell.Tab.0.right" timestamp="1619105527249">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1618660772796" />
+    <state width="1266" height="342" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1619105527249" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1619364928155">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1619364928155" />
   </component>
 </project>
