@@ -21,7 +21,7 @@ export default function LoginScreen() {
         <View>
             <Image style={styles.image} source={require("../photos/login.jpg")}/>
             <View style={styles.container}>
-                <Text style={styles.text_welcome_back}>З поверненням !</Text>
+                <Text style={styles.text_welcome_back}>Welcome back</Text>
 
                 <TextInput
                     style={styles.input}
@@ -43,35 +43,47 @@ export default function LoginScreen() {
                 <View style={styles.view_after_input}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <Checkbox
-                            color={"#0245A3"}
                             status={rememberChecked ? 'checked' : 'unchecked'}
                             onPress={() => {
                                 setRememberChecked(!rememberChecked);
                             }}
                         />
+<<<<<<< HEAD
                         <Text>Запам'ятати мене</Text>
                         <Button uppercase={false} onPress={() => {
                         }}> <Text style={styles.forgot_password}>Забули пароль?</Text> </Button>
+=======
+                        <Text>Remember me</Text>
+                        <Button>Forgot passsword?</Button>
+>>>>>>> 2479346ecde8e4d7f75bf96e49f7f6367894595a
                     </View>
                     <View style={styles.middle_wrapper}>
-                        <Text style={styles.text_sign_up}>Увійти</Text>
+                        <Text style={styles.text_sign_up}>Sign In</Text>
                         {/* <Button icon={'chevron-right'}/> */}
                         <IconButton
                             icon={'chevron-right'}
                             size={50}
+<<<<<<< HEAD
                             color={"#0245A3"}
+=======
+                            color={colors.primary}
+>>>>>>> 2479346ecde8e4d7f75bf96e49f7f6367894595a
                             onPress={() => { navigation.navigate("InfoClubOnboarding") }}
                         />
                     </View>
                 </View>
                 <View style={styles.bottom_wrapper}>
-                    <Text style={styles.text_have_account}>Ще не маєте аккаунт?</Text>
+                    <Text style={styles.text_have_account}>Don’t have an account yet?</Text>
                     <Button
                         uppercase={false}
                         labelStyle={styles.button_sign_up}
                         onPress={() => { navigation.navigate('SignUp') }}
                     >
+<<<<<<< HEAD
                         <Text style={styles.sign_up}>Зареєструватися</Text>
+=======
+                        Sign up
+>>>>>>> 2479346ecde8e4d7f75bf96e49f7f6367894595a
                     </Button>
                 </View>
             </View>
@@ -125,7 +137,7 @@ const styles = StyleSheet.create({
     bottom_wrapper: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 50,
+        marginBottom: 30,
     },
     text_have_account: {
         lineHeight: 21,

@@ -1,10 +1,17 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react'
+<<<<<<< HEAD
 import {StyleSheet, Text, View, Image, Dimensions} from 'react-native';
 import { Button } from "react-native-paper";
 import { useTheme } from 'react-native-paper';
 const imageWidth = Dimensions.get("screen").width;
 const imageHeight = imageWidth;
+=======
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { Button } from "react-native-paper";
+import { useTheme } from 'react-native-paper';
+
+>>>>>>> 2479346ecde8e4d7f75bf96e49f7f6367894595a
 export default function InfoClubOnboarding() {
     const navigation = useNavigation();
 
@@ -53,8 +60,13 @@ const styles = StyleSheet.create({
 
 
     image: {
+<<<<<<< HEAD
         height: imageHeight,
         width: imageWidth,
+=======
+        // width: 500,
+        // marginBottom: 393,
+>>>>>>> 2479346ecde8e4d7f75bf96e49f7f6367894595a
         backgroundColor: '#3333',
     },
     buttonContainer: {

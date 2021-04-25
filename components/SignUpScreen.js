@@ -1,7 +1,7 @@
-import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react'
-import {Dimensions, StyleSheet, Text, View, Image} from 'react-native'
-import {Button, TextInput, Checkbox, useTheme, IconButton} from 'react-native-paper'
+import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react'
+import { Dimensions, StyleSheet, Text, View, Image } from 'react-native'
+import { Button, TextInput, Checkbox, useTheme, IconButton } from 'react-native-paper'
 // import { TextInput } from 'react-native'
 
 const imageWidth = Dimensions.get("screen").width * 0.8;
@@ -21,14 +21,13 @@ export default function SignUpScreen() {
 
     return (
         <View>
-
-            <Image style={styles.image} source={require("../photos/login.jpg")}/>
+            <Image style={styles.image} source={require("../photos/login.jpg")} />
             <View style={styles.container}>
-                <Text style={styles.text_get_started}> Розпочнемо </Text>
+                <Text style={styles.text_get_started}>Get started</Text>
                 {/* <Text>Name</Text> */}
                 <TextInput
                     style={styles.input}
-                    label="Ім’я"
+                    label="Name"
                     mode='outlined'
                     value={name}
                     onChangeText={name => setName(name)}
@@ -39,34 +38,30 @@ export default function SignUpScreen() {
                     mode='outlined'
                     label="Email"
                     value={email}
-
                     placeholder="example@example.com"
                     onChangeText={email => setEmail(email)}
-
                 />
                 {/* <Text>Password</Text> */}
                 <TextInput
                     style={styles.input}
                     mode='outlined'
-                    label="Пароль"
+                    label="Password"
                     value={password}
-                    placeholder="мінімум 8 символів"
+                    placeholder="8+ Characters, 1 Capital letter"
                     onChangeText={password => setPassword(password)}
-                    secureTextEntry={true}
                 />
-                <View style={{flexDirection: 'row'}}>
+                <View style={{ flexDirection: 'row' }}>
 
-                    <Checkbox color={"#0245A3"}
-                              status={checked ? 'checked' : 'unchecked'}
-                              onPress={() => {
-                                  setChecked(!checked);
-                              }}
+                    <Checkbox
+                        status={checked ? 'checked' : 'unchecked'}
+                        onPress={() => {
+                            setChecked(!checked);
+                        }}
                     />
-                    <Text style={styles.text_terms_of_service}>Я прочитав і згоден з Умовами Сервісу
-                        та нашою Політикою Конфіденційності</Text>
+                    <Text style={styles.text_terms_of_service}>I’ve read and agree with Terms of Service and our Privacy Policy</Text>
                 </View>
                 <View style={styles.middle_wrapper}>
-                    <Text style={styles.text_sign_up}>Зареєструватися</Text>
+                    <Text style={styles.text_sign_up}>Sign Up</Text>
                     {/* <Button icon={'chevron-right'}/> */}
                     {/* <Appbar.Action
                         theme={{ colors: { disabled: colors.primary } }}
@@ -77,19 +72,15 @@ export default function SignUpScreen() {
                     <IconButton
                         icon={'chevron-right'}
                         size={50}
-                        color={"#0245A3"}
+                        color={colors.primary}
+                        onPress={() => { }}
                         disabled={!checked}
-                        onPress={() => {
-                        }}
-
                     />
                     {/* <Avatar.Icon icon={'chevron-right'} size={50} /> */}
                 </View>
                 <View style={styles.bottom_wrapper}>
-                    <Text style={styles.text_have_account}>Вже маєте аккаунт?</Text>
-                    <Button uppercase={false} onPress={() => {
-                        navigation.navigate('Login')
-                    }}><Text style={styles.sign_in}>Увійти</Text></Button>
+                    <Text style={styles.text_have_account}>Already have an account?</Text>
+                    <Button uppercase={false} onPress={() => { navigation.navigate('Login') }}>Sign in</Button>
                 </View>
             </View>
         </View>
@@ -97,10 +88,6 @@ export default function SignUpScreen() {
 }
 
 const styles = StyleSheet.create({
-    sign_in:{
-        color: "black",
-        textDecorationLine: 'underline',
-    },
     container: {
         marginHorizontal: '10%',
         height: screenHeight - imageHeight,
@@ -118,7 +105,6 @@ const styles = StyleSheet.create({
     input: {
         margin: 5,
         marginLeft: 0,
-
     },
     text_terms_of_service: {
         lineHeight: 21,
@@ -128,7 +114,7 @@ const styles = StyleSheet.create({
     text_sign_up: {
         fontSize: 30,
         fontWeight: 'bold',
-        marginVertical: 26,
+        marginVertical: 20,
     },
     middle_wrapper: {
         flex: 1,
@@ -139,7 +125,7 @@ const styles = StyleSheet.create({
     bottom_wrapper: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 50,
+        marginBottom: 30,
     },
     text_have_account: {
         lineHeight: 21,
