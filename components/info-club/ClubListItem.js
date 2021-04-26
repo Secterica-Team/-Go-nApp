@@ -21,22 +21,14 @@ export default function ClubListItem({ item, setOpen, open }) {
                 <Card.Title
                     title={item.title}
                     subtitle={item.address}
-<<<<<<< HEAD
                     left={(props) => <Avatar.Image style={styles.image} source={item.image} {...props}  />}
-=======
-                    left={(props) => <Avatar.Icon {...props} icon="folder" />}
->>>>>>> 2479346ecde8e4d7f75bf96e49f7f6367894595a
                     right={(props) => (
                         <IconButton
                             {...props}
                             icon="chevron-down"
                             onPress={() => {
                                 setOpen(open !== item.id ? item.id : undefined)
-<<<<<<< HEAD
                                 // console.log('clicked on ' + item.title)
-=======
-                                // console.log('clicked on ' + item.title) 
->>>>>>> 2479346ecde8e4d7f75bf96e49f7f6367894595a
                             }}
                         />)}
                 />
@@ -45,24 +37,10 @@ export default function ClubListItem({ item, setOpen, open }) {
                         <Text style={{ marginBottom: 10, }}><Text style={styles.bald}>Вебсайт:</Text> clubleva.ua</Text>
                         <Text><Text style={styles.bald}>Телефон:</Text> 067 326 1383</Text>
                         <Button
-<<<<<<< HEAD
                             style={styles.button}
                             mode={'outlined'}
                         >
                            <Text style={{color: "#0245A3", fontSize: 14}}> Приєднатися</Text>
-=======
-                            style={{
-                                // padding: 5,
-                                margin: 5,
-                                borderRadius: 20,
-                                borderColor: colors.primary,
-                                borderWidth: 1,
-                                alignSelf: 'flex-end',
-                            }}
-                            mode={'outlined'}
-                        >
-                            Приєднатися
->>>>>>> 2479346ecde8e4d7f75bf96e49f7f6367894595a
                     </Button>
 
                     </View>
@@ -84,7 +62,6 @@ const styles = StyleSheet.create({
     bald: {
         fontWeight: 'bold'
     },
-<<<<<<< HEAD
    button:{
        margin: 5,
        borderRadius: 100,
@@ -95,6 +72,4 @@ const styles = StyleSheet.create({
        alignSelf: 'flex-end',
    },
 
-=======
->>>>>>> 2479346ecde8e4d7f75bf96e49f7f6367894595a
 })

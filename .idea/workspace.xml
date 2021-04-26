@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="810125a7-7036-4e34-899a-c3d5c0e296b4" name="Default Changelist" comment="">
+    <list default="true" id="bc5a68d8-47c4-41c7-94e3-03ca18b0c787" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/components/BottomTab.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/LoginScreen.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/OnboardingScreen1.js" afterDir="false" />
@@ -20,8 +20,19 @@
       <change afterPath="$PROJECT_DIR$/components/info-club/ClubListItem.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/info-club/InfoClub.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/info-club/InfoClubOnboarding.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/info-club/head.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/info-club/right-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/4236702248fb5fcb53abc26249e673da.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/Button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/Frame 4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/Union.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/icon_social_5bbe05dc6e3359 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/image 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/image 2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/image_2021-04-25_21-16-39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/info-club/info_photos/right-arrow.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/Ellipse 1.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/Ellipse 1.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/Rectangle 6.jpg" afterDir="false" />
@@ -42,9 +53,6 @@
       <change afterPath="$PROJECT_DIR$/photos/seo_1.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/seo_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/gonappv12/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/com/gonappv12/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -53,10 +61,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1rWoyqiC1StVph9wkiQv0iCQNov" />
+  <component name="JupyterTrust" id="ff2a604f-6d8f-43a9-afea-17e4840215df" />
+  <component name="ProjectId" id="1rhAA22FC7EzXlmKBE4YDEtr5aP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,26 +82,24 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\projects\Secterica\Gon\App\GonAppV12\components\info-club" />
+      <recent name="C:\Users\User\projects\Secterica\Gon\App\GonAppV14\components\info-club\info_photos" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\projects\Secterica\Gon\App\GonAppV12" />
+      <recent name="C:\Users\User\projects\Secterica\Gon\App\GonAppV14" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="810125a7-7036-4e34-899a-c3d5c0e296b4" name="Default Changelist" comment="" />
-      <created>1619101463585</created>
+      <changelist id="bc5a68d8-47c4-41c7-94e3-03ca18b0c787" name="Default Changelist" comment="" />
+      <created>1619417802851</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1619101463585</updated>
-      <workItem from="1619101464716" duration="3429000" />
-      <workItem from="1619359695043" duration="16676000" />
+      <updated>1619417802851</updated>
+      <workItem from="1619417804776" duration="4000" />
     </task>
     <servers />
   </component>
@@ -102,28 +116,31 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1266" height="342" key="GridCell.Tab.0.bottom" timestamp="1619105527249">
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619423808649">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1266" height="342" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1619105527249" />
-    <state width="1266" height="342" key="GridCell.Tab.0.center" timestamp="1619105527249">
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1619423808649" />
+    <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1619418025529">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1266" height="342" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1619105527249" />
-    <state width="1266" height="342" key="GridCell.Tab.0.left" timestamp="1619105527248">
+    <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1619418025529" />
+    <state width="1515" height="223" key="GridCell.Tab.0.center" timestamp="1619418025529">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1266" height="342" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1619105527248" />
-    <state width="1266" height="342" key="GridCell.Tab.0.right" timestamp="1619105527249">
+    <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1619418025529" />
+    <state width="1515" height="223" key="GridCell.Tab.0.left" timestamp="1619418025529">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1266" height="342" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1619105527249" />
-    <state x="425" y="197" key="run.anything.popup" timestamp="1619364928155">
+    <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1619418025529" />
+    <state width="1515" height="223" key="GridCell.Tab.0.right" timestamp="1619418025529">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1619364928155" />
+    <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1619418025529" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1619422406845">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1619422406845" />
   </component>
 </project>

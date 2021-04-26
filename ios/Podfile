@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '11.0'
 
-target 'GonAppV12' do
+target 'GonAppV14' do
   use_unimodules!
   config = use_native_modules!
 
@@ -12,8 +12,6 @@ target 'GonAppV12' do
 
   if !ENV['CI']
     use_flipper!({ 'Flipper' => '0.80.0' })
-    pod 'ReactNativeART', :path => '../node_modules/@react-native-community/art'
-
     post_install do |installer|
       flipper_post_install(installer)
     end

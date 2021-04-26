@@ -21,11 +21,7 @@ export default function App() {
   const loggedIn = false;
 
   const initialRouteName = firstTime ? "OnboardingScreen1" : loggedIn ? "BottomTab" : "Login"
-<<<<<<< HEAD
   //const initialRouteName = "InfoClub"
-=======
-  // const initialRouteName = "InfoClub"
->>>>>>> 2479346ecde8e4d7f75bf96e49f7f6367894595a
   return (
       <PaperProvider>
         <NavigationContainer>
