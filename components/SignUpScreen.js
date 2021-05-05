@@ -1,7 +1,7 @@
-import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react'
-import {Dimensions, StyleSheet, Text, View, Image} from 'react-native'
-import {Button, TextInput, Checkbox, useTheme, IconButton} from 'react-native-paper'
+import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react'
+import { Dimensions, StyleSheet, Text, View, Image, KeyboardAvoidingView } from 'react-native'
+import { Button, TextInput, Checkbox, useTheme, IconButton } from 'react-native-paper'
 // import { TextInput } from 'react-native'
 
 const imageWidth = Dimensions.get("screen").width * 0.8;
@@ -15,6 +15,11 @@ export default function SignUpScreen() {
     const [password, setPassword] = useState("")
     const [checked, setChecked] = useState(false)
 
+    const [emailError, setEmailError] = useState(false)
+    const [usernameError, setUsernameError] = useState(false)
+    const [passwordError, setPasswordError] = useState(false)
+
+
     const navigation = useNavigation()
 
     const colors = useTheme().colors;
@@ -22,45 +27,72 @@ export default function SignUpScreen() {
     return (
         <View>
 
-            <Image style={styles.image} source={require("../photos/login.jpg")}/>
+            <Image style={styles.image} source={require("../photos/login.jpg")} />
             <View style={styles.container}>
-                <Text style={styles.text_get_started}> Розпочнемо </Text>
-                {/* <Text>Name</Text> */}
-                <TextInput
-                    style={styles.input}
-                    label="Ім’я"
-                    mode='outlined'
-                    value={name}
-                    onChangeText={name => setName(name)}
-                />
-                {/* <Text>Email</Text> */}
-                <TextInput
-                    style={styles.input}
-                    mode='outlined'
-                    label="Email"
-                    value={email}
+                {/* <KeyboardAvoidingView> */}
+                    <Text style={styles.text_get_started}> Розпочнемо </Text>
+                    <TextInput
+                        style={styles.input}
+                        label="Ім’я"
+                        mode='outlined'
+                        error={usernameError}
+                        value={name}
+                        onBlur={() => {
+                            if (!name || !name.trim()) {
+                                setUsernameError(true);
+                            } else {
+                                setUsernameError(false)
+                            }
+                        }}
+                        onChangeText={name => setName(name)}
+                    />
+                    <Text style={styles.error_text}>{usernameError ? "Введіть правильне ім'я" : ''}</Text>
 
-                    placeholder="example@example.com"
-                    onChangeText={email => setEmail(email)}
+                    <TextInput
+                        style={styles.input}
+                        mode='outlined'
+                        label="Email"
+                        value={email}
+                        error={emailError}
+                        onBlur={() => {
+                            if (!(/^\w+@\w{2,}\.\w{2,5}$/.exec(email))) {
+                                setEmailError(true);
+                            } else {
+                                setEmailError(false)
+                            }
+                        }}
+                        placeholder="example@example.com"
+                        onChangeText={email => setEmail(email)}
 
-                />
-                {/* <Text>Password</Text> */}
-                <TextInput
-                    style={styles.input}
-                    mode='outlined'
-                    label="Пароль"
-                    value={password}
-                    placeholder="мінімум 8 символів"
-                    onChangeText={password => setPassword(password)}
-                    secureTextEntry={true}
-                />
-                <View style={{flexDirection: 'row'}}>
+                    />
+                    <Text style={styles.error_text}>{emailError ? "Введіть правильну пошту" : ""}</Text>
+
+                    <TextInput
+                        style={styles.input}
+                        mode='outlined'
+                        label="Пароль"
+                        error={passwordError}
+                        value={password}
+                        onBlur={() => {
+                            if (!(password.length > 7 && /.*?[\!\@\#\$\%\^&\*;\:\+=\-_\\\/,\.].*/.exec(password))) {
+                                setPasswordError(true);
+                            } else {
+                                setPasswordError(false)
+                            }
+                        }}
+                        placeholder="мінімум 8 символів"
+                        onChangeText={password => setPassword(password)}
+                        secureTextEntry={true}
+                    />
+                    <Text style={styles.error_text}>{passwordError ? 'Мінімум 8 символів та один спеціальний символ' : ''}</Text>
+                {/* </KeyboardAvoidingView> */}
+                <View style={{ flexDirection: 'row' }}>
 
                     <Checkbox color={"#0245A3"}
-                              status={checked ? 'checked' : 'unchecked'}
-                              onPress={() => {
-                                  setChecked(!checked);
-                              }}
+                        status={checked ? 'checked' : 'unchecked'}
+                        onPress={() => {
+                            setChecked(!checked);
+                        }}
                     />
                     <Text style={styles.text_terms_of_service}>Я прочитав і згоден з Умовами Сервісу
                         та нашою Політикою Конфіденційності</Text>
@@ -97,7 +129,7 @@ export default function SignUpScreen() {
 }
 
 const styles = StyleSheet.create({
-    sign_in:{
+    sign_in: {
         color: "black",
         textDecorationLine: 'underline',
     },
@@ -139,11 +171,14 @@ const styles = StyleSheet.create({
     bottom_wrapper: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 50,
+        marginBottom: 20,
     },
     text_have_account: {
         lineHeight: 21,
         fontSize: 16,
         color: '#0007',
-    }
+    },
+    error_text: {
+        color: '#b00',
+    },
 })
