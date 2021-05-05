@@ -12,6 +12,7 @@ import { Provider as PaperProvider } from 'react-native-paper'
 import LoginScreen from './components/LoginScreen';
 import InfoClubOnboarding from "./components/info-club/InfoClubOnboarding";
 import InfoClub from './components/info-club/InfoClub';
+import MainScreen from './components/main-screen/MainScreen';
 
 const Stack = createStackNavigator();
 
@@ -32,7 +33,6 @@ export default function App() {
                 headerShown: false,
               }}
               initialRouteName={initialRouteName}>
-
             <Stack.Screen name="BottomTab" component={BottomTab} />
             <Stack.Screen name="OnboardingScreen1" component={OnboardingScreen1} />
             <Stack.Screen name="OnboardingScreen2" component={OnboardingScreen2} />
@@ -41,6 +41,7 @@ export default function App() {
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="InfoClubOnboarding" component={InfoClubOnboarding} />
             <Stack.Screen name="InfoClub" component={InfoClub} />
+            <Stack.Screen name="MainScreen" component={MainScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </PaperProvider>

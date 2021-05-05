@@ -4,10 +4,13 @@ import { Avatar, Button, Card, IconButton, Surface, useTheme } from 'react-nativ
 import { set } from 'react-native-reanimated'
 import Collapsible from 'react-native-collapsible';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { useNavigation } from '@react-navigation/core';
 
 export default function ClubListItem({ item, setOpen, open }) {
 
     const colors = useTheme().colors;
+
+    const navigation = useNavigation();
 
     return (
 
@@ -39,6 +42,7 @@ export default function ClubListItem({ item, setOpen, open }) {
                         <Button
                             style={styles.button}
                             mode={'outlined'}
+                            onPress={() => {navigation.navigate('MainScreen')}}
                         >
                            <Text style={{color: "#0245A3", fontSize: 14}}> Приєднатися</Text>
                     </Button>
