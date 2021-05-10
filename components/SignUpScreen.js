@@ -27,7 +27,7 @@ export default function SignUpScreen() {
     return (
         <View>
 
-            <Image style={styles.image} source={require("../photos/login.jpg")} />
+            <Image style={styles.image} source={require("../photos/login_signup/login.jpg")} />
             <View style={styles.container}>
                 {/* <KeyboardAvoidingView> */}
                     <Text style={styles.text_get_started}> Розпочнемо </Text>

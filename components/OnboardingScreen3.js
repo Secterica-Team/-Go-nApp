@@ -11,7 +11,7 @@ export default function Page3() {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={require('../photos/onboard_3.jpg')}/>
+            <Image style={styles.image} source={require('../photos/onboarding/onboard_3.jpg')}/>
 
             <View style={styles.container}>
                 <Text style={styles.title}> Персональна Статистика </Text>

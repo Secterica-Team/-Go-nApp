@@ -22,7 +22,7 @@ export default function LoginScreen() {
 
     return (
         <View>
-            <Image style={styles.image} source={require("../photos/login.jpg")} />
+            <Image style={styles.image} source={require("../photos/login_signup/login.jpg")} />
             <View style={styles.container}>
                 <Text style={styles.text_welcome_back}>З поверненням !</Text>
 
