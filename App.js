@@ -34,8 +34,9 @@ export default function App() {
               screenOptions={{
                 headerShown: false,
               }}
-              // initialRouteName={initialRouteName}>
-              initialRouteName={'MainScreen'}>
+              initialRouteName={initialRouteName}
+              // initialRouteName={'MainScreen'}
+            >
             <Stack.Screen name="BottomTab" component={BottomTab} />
             <Stack.Screen name="OnboardingScreen1" component={OnboardingScreen1} />
             <Stack.Screen name="OnboardingScreen2" component={OnboardingScreen2} />
