@@ -16,7 +16,7 @@ export default function OnboardingScreen1() {
 
     return (
         <View>
-            <Image style={styles.image} source={require('../photos/onboard_1.jpg')}/>
+            <Image style={styles.image} source={require('../photos/onboarding/onboard_1.jpg')}/>
 
             <View style={styles.container}>
                 <Text style={styles.title}> Автоматична Система Часу </Text>

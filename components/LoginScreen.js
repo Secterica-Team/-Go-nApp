@@ -1,7 +1,7 @@
-import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react'
-import {Dimensions, StyleSheet, View, Image, Alert} from 'react-native'
-import {Text, TextInput, Button, Checkbox, IconButton, useTheme} from 'react-native-paper'
+import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react'
+import { Dimensions, StyleSheet, View, Image, Alert } from 'react-native'
+import { Text, TextInput, Button, Checkbox, IconButton, useTheme } from 'react-native-paper'
 
 
 const imageWidth = Dimensions.get("screen").width * 0.8;
@@ -13,13 +13,16 @@ export default function LoginScreen() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
+    const [emailError, setEmailError] = useState(false)
+    // const [password, setEmailError] = useState(false)
+
     const navigation = useNavigation()
     const colors = useTheme().colors;
     const [rememberChecked, setRememberChecked] = useState(false);
 
     return (
         <View>
-            <Image style={styles.image} source={require("../photos/login.jpg")}/>
+            <Image style={styles.image} source={require("../photos/login_signup/login.jpg")} />
             <View style={styles.container}>
                 <Text style={styles.text_welcome_back}>З поверненням !</Text>
 
@@ -28,10 +31,17 @@ export default function LoginScreen() {
                     mode='outlined'
                     label="Email"
                     value={email}
+                    error={emailError}
                     onChangeText={email => setEmail(email)}
-
-
+                    onBlur={() => {
+                        if (!(/^\w+@\w{2,}\.\w{2,5}$/.exec(email))) {
+                            setEmailError(true);
+                        } else {
+                            setEmailError(false)
+                        }
+                    }}
                 />
+                <Text style={styles.error}>{emailError ? "Введіть правильну пошту" : ""}</Text>
 
                 <TextInput
 
@@ -39,12 +49,12 @@ export default function LoginScreen() {
                     mode='outlined'
                     label="Пароль"
                     value={password}
-                    placeholder="8+ Characters, 1 Capital letter"
+                    // placeholder="8+ Characters, 1 Capital letter"
                     onChangeText={password => setPassword(password)}
                     secureTextEntry={true}
                 />
                 <View style={styles.view_after_input}>
-                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <Checkbox
                             color={"#0245A3"}
                             status={rememberChecked ? 'checked' : 'unchecked'}
@@ -142,5 +152,8 @@ const styles = StyleSheet.create({
     view_after_input: {
         justifyContent: 'space-between',
         flex: 1,
+    },
+    error: {
+        color: '#b00',
     },
 })

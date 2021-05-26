@@ -4,7 +4,7 @@ import React from 'react'
 import {View, Image, StyleSheet, Text, Dimensions} from 'react-native';
 import {Button} from "react-native-paper";
 
-const imageSrc = require('../photos/onboard_2.jpg');
+const imageSrc = require('../photos/onboarding/onboard_2.jpg');
 
 const imageWidth = Dimensions.get("screen").width;
 const imageHeight = imageWidth;
