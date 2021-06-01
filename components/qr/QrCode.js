@@ -19,25 +19,8 @@ import {
   Button,
   TextInput,
 } from "react-native-paper";
+import Gate from "./Gate";
 import ComponentWithButtonTextAndBackgroundImage from "../main-screen/ComponentWithButtonTextAndBackgroundImage";
-
-const Gate = ({ item }) => (
-  <View
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      backgroundColor: "#85BAF3",
-      height: 40,
-      marginBottom: 15,
-      borderRadius: 10,
-    }}
-  >
-    <Text style={{ fontSize: 14, fontWeight: "500", color: "#FFFF" }}>
-      {item.distance} метрів
-    </Text>
-  </View>
-);
 
 export default function QrCode() {
   const navigation = useNavigation();
@@ -115,8 +98,21 @@ export default function QrCode() {
             data={Array.from(current_gates.gates)}
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
-            style={{ maxHeight: 175 }}
+            style={{ height: 125 }}
+            ListEmptyComponent={
+              <Text style={{ alignSelf: "center", marginTop: 50 }}>
+                Ви ще нічого не додали :(
+              </Text>
+            }
           />
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => {
+              navigation.push("BeforeRun");
+            }}
+          >
+            <Text style={styles.buttonText}>Завершити підключення</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -124,6 +120,20 @@ export default function QrCode() {
 }
 
 const styles = StyleSheet.create({
+  button: {
+    alignSelf: "center",
+    borderRadius: 10,
+    backgroundColor: "#0245A3",
+    height: 50,
+    width: 200,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22,
+  },
+  buttonText: {
+    fontSize: 15,
+    color: "#E8E8E8",
+  },
   distanceContainer: {
     marginTop: "10%",
     width: "95%",
@@ -140,15 +150,16 @@ const styles = StyleSheet.create({
     elevation: 7,
   },
   devicesContainer: {
-    marginTop: "8%",
+    marginTop: "10%",
     width: "90%",
     alignSelf: "center",
   },
   input: {
-    marginTop: "10%",
-    marginBottom: "5%",
+    marginTop: "6%",
+    marginBottom: "4%",
     width: "75%",
     borderColor: "#85BAF3",
+    borderRadius: 10,
   },
   inputTitle: {
     fontSize: 16,

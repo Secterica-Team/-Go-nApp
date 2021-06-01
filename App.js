@@ -16,6 +16,7 @@ import MainScreen from "./components/main-screen/MainScreen";
 import PavingRouteScreen from "./components/paving-route-screen/PavingRouteScreen";
 import QrCode from "./components/qr/QrCode";
 import DeviceQrScanner from "./components/qr/DeviceQrScanner";
+import BeforeRun from "./components/qr/BeforeRun";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 const Stack = createStackNavigator();
@@ -72,6 +73,7 @@ export default function App() {
             <Stack.Screen name="PavingRoute" component={PavingRouteScreen} />
             <Stack.Screen name="QrCode" component={QrCode} />
             <Stack.Screen name="DeviceQrScanner" component={DeviceQrScanner} />
+            <Stack.Screen name="BeforeRun" component={BeforeRun} />
           </Stack.Navigator>
         </NavigationContainer>
       </PaperProvider>

@@ -38,7 +38,8 @@ export default function ComponentWithButtonTextAndBackgroundImage(props) {
         <Text
           style={{
             color: "white",
-            width: "60%",
+            width: "50%",
+            marginRight: 10,
           }}
         >
           {text}

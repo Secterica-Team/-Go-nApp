@@ -24,7 +24,7 @@ export default function DeviceQrScanner({ route }) {
     setData(data);
     dispatch(addGate({ id: data, distance: entered_distance }));
     alert(`Девайс успішно додано!`);
-    navigation.push("QrCode");
+    navigation.goBack();
   };
 
   if (hasPermission === null) {
