@@ -47,12 +47,12 @@ export default function MainScreen() {
   return (
     <View style={{ paddingTop: 30, marginHorizontal: 30, height: "100%" }}>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-        <View style={{ width: "40%" }}>
-          <Text style={{ fontSize: 36, fontWeight: "800", marginTop: 40 }}>
-            Привіт, Олег
+        <View style={{ width: "45%" }}>
+          <Text style={{ fontSize: 36, fontWeight: "bold", marginTop: 40 }}>
+            Привіт, Максим
           </Text>
           <Text style={{ fontSize: 14, color: "#444", marginTop: 20 }}>
-            Сьогодні, 5 травня
+            Сьогодні, 2 червня
           </Text>
         </View>
         <View
@@ -88,7 +88,7 @@ export default function MainScreen() {
       <ComponentWithButtonTextAndBackgroundImage
         text={"Приєднатись до спорядження"}
         onPress={() => {
-          navigation.navigate("PavingRoute");
+          navigation.navigate("QrCode");
         }}
       />
     </View>

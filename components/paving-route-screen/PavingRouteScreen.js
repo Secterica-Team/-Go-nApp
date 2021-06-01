@@ -9,14 +9,13 @@ import {
 } from "react-native";
 import { Appbar, List } from "react-native-paper";
 import ComponentWithButtonTextAndBackgroundImage from "../main-screen/ComponentWithButtonTextAndBackgroundImage";
-import Icon from "react-native-vector-icons/FontAwesome";
 
 const traceRoutes = [
-  { id: 1, distances: [10, 10, 10, 20] },
-  { id: 2, distances: [10, 10, 10, 20] },
-  { id: 3, distances: [10, 10, 10, 20] },
-  { id: 4, distances: [10, 10, 10, 20] },
-  { id: 5, distances: [10, 10, 10, 20] },
+  { id: 1, distances: [15 + " м", 30 + " м", 60 + " м", 100 + " м"] },
+  { id: 2, distances: [10 + " м", 20 + " м", 30 + " м"] },
+  { id: 3, distances: [50 + " м", 100 + " м", 150 + " м"] },
+  { id: 4, distances: [10 + " м", 10 + " м", 10 + " м", 20 + " м"] },
+  { id: 5, distances: [10 + " м", 10 + " м", 10 + " м", 20 + " м"] },
 ];
 
 const gateways = [
@@ -133,15 +132,19 @@ export default function PavingRouteScreen() {
         <Appbar.Action icon="dots-vertical" onPress={() => {}} color={"#888"} />
       </Appbar.Header>
       <View style={{ margin: 10, flex: 1 }}>
-        <Text>Обрати попередній шаблон</Text>
+        <Text style={{ fontWeight: "bold", fontSize: 16 }}>
+          Обрати попередній шаблон
+        </Text>
         <FlatList
           horizontal={true}
           data={traceRoutes}
           renderItem={renderRoute}
-          keyExtractor={(item, index) => JSON.stringify(item.id)}
+          keyExtractor={(item, index) => JsSON.stringify(item.id)}
           // contentContainerStyle={{height: }}
         />
-        <Text>Створити новий шаблон</Text>
+        <Text style={{ fontWeight: "bold", fontSize: 16 }}>
+          Створити новий шаблон
+        </Text>
         <FlatList
           // contentContainerStyle={{flex: 1}}
           data={gateways}
